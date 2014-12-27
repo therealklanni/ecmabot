@@ -60,18 +60,19 @@ module.exports = (robot) ->
     if filter
       cmds = cmds.filter (cmd) ->
         cmd.match new RegExp(filter, 'i')
+
       if cmds.length == 0
-        msg.send "No available commands match #{filter}"
-        return
+        return msg.send "No available commands match #{filter}"
+      else
+        prefix = robot.alias or robot.name
 
-    prefix = robot.alias or robot.name
-    cmds = cmds.map (cmd) ->
-      cmd = cmd.replace /hubot/ig, robot.name
-      cmd.replace new RegExp("^#{robot.name}"), prefix
+        cmds = cmds.map (cmd) ->
+          cmd = cmd.replace /hubot/ig, robot.name
+          cmd.replace new RegExp("^#{robot.name}"), prefix
 
-    emit = cmds.join "\n"
+        return msg.send cmds.join "\n"
 
-    msg.send emit
+    msg.send "You can view a list of all my commands at #{process.env.HUBOT_BASE_URL}#{robot.name}/help"
 
   robot.router.get "/#{robot.name}/help", (req, res) ->
     cmds = robot.helpCommands().map (cmd) ->
