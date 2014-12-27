@@ -23,7 +23,7 @@
   "dependencies": {
     "hubot": "^2.11.0",
     "hubot-scripts": "^2.5.16",
-    "hubot-slack": "^2.2.0"
+    "hubot-slack": "^3.2.0"
   },
   "engines": {
     "node": ">= 0.8.x",
