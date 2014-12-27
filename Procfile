@@ -1,1 +1,1 @@
-web: bin/hubot -a slack -n heroku
+web: bin/hubot -a slack -n banana
