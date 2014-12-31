@@ -24,7 +24,7 @@
     "hubot": "^2.11.0",
     "hubot-auth": "^1.1.2",
     "hubot-factoids": "^0.2.4",
-    "hubot-plusplus": "^1.1.2",
+    "hubot-plusplus": "git://github.com/hubot-scripts/hubot-plusplus#master",
     "hubot-scripts": "^2.5.16",
     "hubot-slack": "^3.2.0"
   },
