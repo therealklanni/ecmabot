@@ -1,1 +1,1 @@
-web: bin/hubot -a slack -n banana
+web: bin/hubot -a slack -n ecmabot
