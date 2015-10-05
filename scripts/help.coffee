@@ -72,7 +72,7 @@ module.exports = (robot) ->
 
         return msg.send cmds.join "\n"
 
-    msg.send "You can view a list of all my commands at #{process.env.HUBOT_BASE_URL}#{robot.name}/help"
+    msg.send "You can view a list of all my commands at #{process.env.HUBOT_BASE_URL}/#{robot.name}/help"
 
   robot.router.get "/#{robot.name}/help", (req, res) ->
     cmds = robot.helpCommands().map (cmd) ->
