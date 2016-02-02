@@ -1,0 +1,19 @@
+{
+  "name": "ecmabot",
+  "scripts": {
+  },
+  "env": {
+    "HEROKU_URL": {
+      "required": true
+    },
+    "HUBOT_BASE_URL": {
+      "required": true
+    },
+    "HUBOT_SLACK_TOKEN": {
+      "required": true
+    }
+  },
+  "addons": [
+    "redistogo"
+  ]
+}
